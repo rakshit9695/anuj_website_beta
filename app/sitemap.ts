@@ -16,9 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
   const staticPaths = [
     "", "/about", "/services", "/industries", "/global", "/insights",
-    "/knowledge-bank", "/media", "/careers", "/contact", "/sitemap",
+    "/knowledge-bank", "/careers", "/contact", "/sitemap",
     "/legal/privacy", "/legal/terms", "/legal/cookie-policy", "/legal/disclaimer",
-    "/media/news", "/media/press-releases", "/media/videos",
     "/insights/budget", "/insights/budget/2026-27",
     ...aboutNav.map((n) => n.href),
     ...insightsNav.map((n) => n.href),

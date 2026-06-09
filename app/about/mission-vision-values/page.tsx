@@ -25,13 +25,32 @@ export default function MVV() {
           <div className="rounded-xl border border-navy-100 bg-navy-50 p-8">
             <p className="eyebrow">Mission</p>
             <p className="mt-3 font-display text-2xl text-navy-900">
-              [Placeholder] To be the single, trusted advisor for India&rsquo;s most ambitious businesses and families — across every discipline they need.
+              To be the single, trusted advisor for businesses, entrepreneurs,
+              investment funds, institutions and families by delivering
+              integrated solutions across finance, taxation, governance,
+              compliance and strategic advisory.
+            </p>
+            <p className="mt-3 text-sm text-ink-700">
+              We exist to help our clients navigate complexity, manage risk,
+              seize opportunities and create sustainable long-term value through
+              technical excellence, commercial insight and unwavering
+              professional integrity.
             </p>
           </div>
           <div className="rounded-xl border border-navy-100 bg-navy-50 p-8">
             <p className="eyebrow">Vision</p>
             <p className="mt-3 font-display text-2xl text-navy-900">
-              [Placeholder] A Big-4 challenger firm defined by depth, integrity and the rare CA · CS · CMA combination.
+              To build one of India&rsquo;s most respected multidisciplinary
+              professional services firms — recognised for exceptional
+              expertise, trusted relationships and the ability to solve complex
+              business challenges across jurisdictions, industries and stages of
+              growth.
+            </p>
+            <p className="mt-3 text-sm text-ink-700">
+              Our vision is to become the first choice for ambitious
+              organisations seeking a long-term advisory partner capable of
+              supporting every aspect of their financial, regulatory and
+              strategic journey.
             </p>
           </div>
         </div>

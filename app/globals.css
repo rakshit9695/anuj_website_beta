@@ -3,44 +3,47 @@
 @tailwind utilities;
 
 :root {
-  /* Brand core — navy */
-  --navy-950: #07142b;
-  --navy-900: #0a1f3c;
-  --navy-800: #13315c;
-  --navy-700: #1e4a82;
-  --navy-100: #e7edf5;
-  --navy-50: #f4f7fb;
+  /* Brand core — deep navy blue (token name `navy-*` retained for compatibility).
+     Deliberately deep and slightly desaturated so it reads as premium, not electric. */
+  --navy-950: #06203a;
+  --navy-900: #0a2e52;
+  --navy-800: #15466e;
+  --navy-700: #225f8d;
+  --navy-100: #d8e6f0;
+  --navy-50: #eef4f9;
 
-  /* Accent — brass / gold */
-  --brass-600: #a87c2e;
-  --brass-500: #c9a227;
-  --brass-400: #d9b84e;
-  --brass-100: #f7efd8;
+  /* Accent — teal-leaning emerald green (token name `brass-*` retained).
+     Sits between blue and green on the wheel so it harmonises with navy rather
+     than clashing. Used as a 10% accent only, always with white text on fills. */
+  --brass-600: #0a5f47;
+  --brass-500: #0e7d5e;
+  --brass-400: #2ba183;
+  --brass-100: #d6efe7;
 
-  /* Neutrals — warm grey */
-  --ink-900: #1a1a1a;
-  --ink-700: #3d3d3d;
-  --ink-500: #6b6b6b;
-  --ink-300: #c7c4bd;
-  --paper: #fbfaf7;
+  /* Neutrals — cool blue-grey, tuned to the navy */
+  --ink-900: #122231;
+  --ink-700: #36495a;
+  --ink-500: #647688;
+  --ink-300: #d3dde6;
+  --paper: #f7fafc;
   --surface: #ffffff;
-  --surface-alt: #f4f2ec;
+  --surface-alt: #edf3f8;
 
   /* Functional / category */
-  --cat-direct: #1e4a82;
-  --cat-indirect: #0e7c66;
-  --cat-regulatory: #7a4fb0;
+  --cat-direct: #15466e;
+  --cat-indirect: #0c6e57;
+  --cat-regulatory: #4f6fb0;
   --cat-litigation: #b23a2e;
   --cat-giftcity: #0f8fa3;
-  --cat-budget: #c9a227;
-  --cat-trade: #b8884d;
+  --cat-budget: #0e7d5e;
+  --cat-trade: #15466e;
 
-  --success: #0e7c66;
+  --success: #0e7d5e;
   --warning: #b8884d;
   --error: #b23a2e;
 
-  --shadow-card: 0 1px 2px rgba(10, 31, 60, 0.06),
-    0 8px 24px rgba(10, 31, 60, 0.06);
+  --shadow-card: 0 1px 2px rgba(10, 46, 82, 0.07),
+    0 8px 24px rgba(10, 46, 82, 0.08);
 }
 
 @layer base {

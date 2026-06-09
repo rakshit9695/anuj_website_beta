@@ -104,18 +104,16 @@ export function SiteHeader() {
         <div className={cn("container-bleed flex items-center gap-4 transition-all", scrolled ? "h-14" : "h-[68px]")}>
           {/* Logo */}
           <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label={`${site.name} home`}>
-            <span
-              className={cn(
-                "grid h-9 w-9 shrink-0 place-items-center rounded-md font-display text-[13px] font-semibold tracking-tight",
-                dark ? "bg-brass-500 text-navy-900" : "bg-navy-900 text-paper",
-              )}
-            >
-              ADA
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-ada.jpg"
+              alt={`${site.name} logo`}
+              className="h-10 w-10 shrink-0 rounded-md bg-white object-contain p-0.5 ring-1 ring-black/5"
+            />
             <span className="hidden leading-tight sm:block">
               <span className="block whitespace-nowrap font-display text-[15px] font-medium">{site.name}</span>
               <span className={cn("block text-[9px] uppercase tracking-[0.22em]", dark ? "text-brass-400" : "text-brass-600")}>
-                CA · CS · CMA
+                Chartered Accountants
               </span>
             </span>
           </Link>

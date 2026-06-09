@@ -67,7 +67,7 @@ export function NewsletterSignup({
         <button
           type="submit"
           disabled={busy}
-          className="h-11 shrink-0 rounded-lg bg-brass-500 px-4 text-sm font-semibold text-navy-900 transition-colors hover:bg-brass-400 disabled:opacity-50"
+          className="h-11 shrink-0 rounded-lg bg-brass-500 px-4 text-sm font-semibold text-paper transition-colors hover:bg-brass-600 disabled:opacity-50"
         >
           {busy ? "…" : "Subscribe"}
         </button>
@@ -83,7 +83,7 @@ export function NewsletterSignup({
               className={cn(
                 "rounded-full border px-2.5 py-1 text-xs transition-colors",
                 topics.includes(t)
-                  ? "border-brass-500 bg-brass-500 text-navy-900"
+                  ? "border-brass-500 bg-brass-500 text-paper"
                   : onDark
                     ? "border-white/25 text-[#C2CEDD] hover:border-brass-400"
                     : "border-ink-300 text-ink-700 hover:border-brass-400",

@@ -73,9 +73,9 @@ const config: Config = {
         bleed: "1440px",
       },
       boxShadow: {
-        card: "0 1px 2px rgba(10,31,60,.06), 0 8px 24px rgba(10,31,60,.06)",
+        card: "0 1px 2px rgba(10,46,82,.07), 0 8px 24px rgba(10,46,82,.08)",
         "card-hover":
-          "0 2px 4px rgba(10,31,60,.08), 0 16px 40px rgba(10,31,60,.10)",
+          "0 2px 4px rgba(10,46,82,.10), 0 16px 40px rgba(10,46,82,.12)",
       },
       borderRadius: {
         xl: "12px",

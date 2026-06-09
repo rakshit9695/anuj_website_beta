@@ -38,7 +38,7 @@ export const openings: Opening[] = [
     slug: "manager-gst",
     title: "Manager — Indirect Tax / GST",
     team: "Tax",
-    location: "Bengaluru",
+    location: "Surat",
     type: "Full-time",
     summary: "Own GST compliance, refunds and litigation for a portfolio of clients.",
     responsibilities: ["Manage GST compliance cycles", "Handle refunds and reconciliations", "Draft SCN replies and appeals"],

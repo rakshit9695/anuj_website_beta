@@ -10,9 +10,9 @@ import { CTABand } from "@/components/ui/CTABand";
 import { corridors, desks, worldCoverage } from "@/content/global";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Global Presence — One firm. Every country.",
+  title: "Global Presence — India-rooted, globally connected",
   description:
-    "Pan-India presence across 12 cities and cross-border coverage spanning the US, UK, UAE, Singapore, Mauritius, Cayman and GIFT City IFSC.",
+    "Offices in Mumbai, Ahmedabad and Surat, with cross-border advisory across the US, UK, UAE, Singapore and the GIFT City IFSC.",
   path: "/global",
 });
 
@@ -21,9 +21,9 @@ export default function GlobalHub() {
     <>
       <PageHero
         crumbs={[{ name: "Global Presence", href: "/global" }]}
-        eyebrow="Pan-India & Global"
-        title="One firm. Every country."
-        intro="A twelve-city Indian footprint anchored in Mumbai, with cross-border advisory across the jurisdictions that matter to Indian capital and inbound investors."
+        eyebrow="India & Global"
+        title="India-rooted, globally connected"
+        intro="Offices in Mumbai, Ahmedabad and Surat, with cross-border advisory across the jurisdictions that matter to Indian businesses, founders and inbound investors."
       />
 
       <Section tone="paper">

@@ -6,6 +6,7 @@ import {
   ShoppingBag, Plane, Antenna, Car, Package, GraduationCap, Clapperboard,
   Truck, Layers, MapPin, Globe, Lock, ArrowRight, ChevronRight, ChevronDown,
   Calculator, FileText, Files, BookOpen, CalendarDays, Link2, Bell, Search,
+  Award,
   type LucideIcon,
 } from "lucide-react";
 
@@ -16,7 +17,7 @@ const registry: Record<string, LucideIcon> = {
   Factory, Building, Landmark, Ship, TrafficCone, Zap, ShoppingBag, Plane,
   Antenna, Car, Package, GraduationCap, Clapperboard, Truck, Layers, MapPin,
   Globe, Lock, ArrowRight, ChevronRight, ChevronDown, Calculator, FileText,
-  Files, BookOpen, CalendarDays, Link2, Bell, Search,
+  Files, BookOpen, CalendarDays, Link2, Bell, Search, Award,
 };
 
 /** Render a Lucide icon by name; falls back to a neutral mark. */

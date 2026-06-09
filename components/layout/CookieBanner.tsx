@@ -85,7 +85,7 @@ export function CookieBanner() {
               </button>
               <button
                 onClick={() => save({ necessary: true, analytics: true, marketing: true })}
-                className="rounded-lg bg-brass-500 px-4 py-2 text-sm font-semibold text-navy-900 transition-colors hover:bg-brass-400"
+                className="rounded-lg bg-brass-500 px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-brass-600"
               >
                 Accept all
               </button>
@@ -130,7 +130,7 @@ export function CookieBanner() {
             <div className="flex justify-end gap-2">
               <button
                 onClick={() => save({ necessary: true, analytics, marketing })}
-                className="rounded-lg bg-brass-500 px-4 py-2 text-sm font-semibold text-navy-900 transition-colors hover:bg-brass-400"
+                className="rounded-lg bg-brass-500 px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-brass-600"
               >
                 Save preferences
               </button>

@@ -31,7 +31,7 @@ export function StickyCTA() {
         <div className="flex items-center gap-2">
           <Link
             href={primaryConsultationCta.href}
-            className="rounded-lg bg-brass-500 px-4 py-1.5 text-sm font-semibold text-navy-900 hover:bg-brass-400"
+            className="rounded-lg bg-brass-500 px-4 py-1.5 text-sm font-semibold text-paper hover:bg-brass-600"
           >
             Book now
           </Link>

@@ -35,8 +35,8 @@ export function RepositoryView({ items }: { items: RepoItem[] }) {
         />
       </div>
       <ul className="mt-6 divide-y divide-ink-300 rounded-xl border border-ink-300 bg-surface">
-        {filtered.map((i) => (
-          <li key={i.name} className="flex items-center justify-between gap-4 px-5 py-3.5">
+        {filtered.map((i, idx) => (
+          <li key={`${i.category}-${i.name}-${idx}`} className="flex items-center justify-between gap-4 px-5 py-3.5">
             <span>
               <span className="font-medium text-navy-900">{i.name}</span>
               <span className="ml-2 rounded-full bg-navy-50 px-2 py-0.5 text-xs text-navy-700">{i.category}</span>

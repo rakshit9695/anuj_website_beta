@@ -46,7 +46,7 @@ export default function HumanSitemap() {
           </div>
           <div className="space-y-10">
             <Col title="Careers" links={careersNav} />
-            <Col title="Company" links={[{ label: "Contact", href: "/contact" }, { label: "Media", href: "/media" }, { label: "Privacy", href: "/legal/privacy" }, { label: "Terms", href: "/legal/terms" }, { label: "Cookie Policy", href: "/legal/cookie-policy" }, { label: "Disclaimer", href: "/legal/disclaimer" }]} />
+            <Col title="Company" links={[{ label: "Contact", href: "/contact" }, { label: "Privacy", href: "/legal/privacy" }, { label: "Terms", href: "/legal/terms" }, { label: "Cookie Policy", href: "/legal/cookie-policy" }, { label: "Disclaimer", href: "/legal/disclaimer" }]} />
           </div>
         </div>
       </Section>

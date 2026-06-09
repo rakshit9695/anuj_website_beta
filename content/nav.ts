@@ -12,7 +12,6 @@ export const primaryNav: NavLink[] = [
   { label: "Global Presence", href: "/global" },
   { label: "Insights", href: "/insights" },
   { label: "Knowledge Bank", href: "/knowledge-bank" },
-  { label: "Media", href: "/media" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
@@ -97,22 +96,15 @@ export const knowledgeBankNav: NavLink[] = [
 
 export const aboutNav: NavLink[] = [
   { label: "Our Story", href: "/about/our-story" },
-  { label: "Our Journey", href: "/about/our-journey" },
   { label: "Mission, Vision & Values", href: "/about/mission-vision-values" },
   { label: "The ADA Way", href: "/about/the-ada-way" },
   { label: "Team", href: "/about/team" },
-  { label: "Awards", href: "/about/awards" },
-  { label: "Credentials", href: "/about/credentials" },
-  { label: "Code of Ethics", href: "/about/code-of-ethics" },
-  { label: "CSR", href: "/about/csr" },
 ];
 
 export const careersNav: NavLink[] = [
-  { label: "Life at ADA", href: "/careers" },
+  { label: "Careers", href: "/careers" },
   { label: "Current Openings", href: "/careers/openings" },
   { label: "Articleship", href: "/careers/articleship" },
-  { label: "Why Join ADA", href: "/careers/why-join" },
-  { label: "Alumni", href: "/careers/alumni" },
 ];
 
 export const footerColumns = {
@@ -124,7 +116,6 @@ export const footerColumns = {
     { label: "Knowledge Bank", href: "/knowledge-bank" },
     { label: "Calculators", href: "/knowledge-bank/calculators" },
     { label: "Careers", href: "/careers" },
-    { label: "Media", href: "/media" },
     { label: "Contact", href: "/contact" },
   ] as NavLink[],
 };

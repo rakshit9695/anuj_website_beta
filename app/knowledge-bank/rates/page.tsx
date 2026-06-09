@@ -7,6 +7,7 @@ import { Section } from "@/components/ui/Section";
 import { CTABand } from "@/components/ui/CTABand";
 import { formatDate } from "@/lib/utils";
 import { rateCharts } from "@/content/rates/registry";
+import { ReferenceLibrary } from "@/components/knowledge/ReferenceLibrary";
 
 export const metadata: Metadata = buildMetadata({
   title: "Rates & Utilities",
@@ -24,10 +25,11 @@ export default function RatesIndex() {
         intro="Current rate charts and reference tables, maintained in editable data files. Verify against the latest notifications before relying on them."
       />
       <Section tone="paper">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <h2 className="font-display text-h2 text-navy-900">Live rate charts</h2>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {rateCharts.map((r) => (
             <Link key={r.slug} href={`/knowledge-bank/rates/${r.slug}`} className="group flex flex-col rounded-xl border border-ink-300 bg-surface p-6 transition-all hover:-translate-y-1 hover:shadow-card">
-              <h2 className="font-display text-lg text-navy-900">{r.title}</h2>
+              <h3 className="font-display text-lg text-navy-900">{r.title}</h3>
               <p className="mt-1 flex-1 text-sm text-ink-700">{r.summary}</p>
               <p className="mt-2 text-xs text-ink-500">Updated {formatDate(r.updated)}</p>
               <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-navy-700">View chart <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden /></span>
@@ -35,6 +37,20 @@ export default function RatesIndex() {
           ))}
         </div>
       </Section>
+
+      <Section tone="alt">
+        <div className="mb-8 max-w-prose">
+          <p className="eyebrow">Reference Library</p>
+          <p className="mt-3 text-ink-700">
+            A complete, expanding reference library across direct &amp; indirect
+            tax, corporate, FEMA/RBI, SEBI and business utilities. Linked items
+            are live tools; the remainder are being populated. Verify all values
+            against the latest notifications before relying on them.
+          </p>
+        </div>
+        <ReferenceLibrary />
+      </Section>
+
       <CTABand />
     </>
   );

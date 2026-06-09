@@ -9,7 +9,7 @@ import { offices } from "@/content/offices";
 
 export const metadata: Metadata = buildMetadata({
   title: "Our Offices in India",
-  description: "Anuj Desai & Associates' twelve-city Indian presence — offices, addresses and partners-in-charge.",
+  description: "Anuj Desai & Associates' offices in Mumbai, Ahmedabad and Surat — addresses and partners-in-charge.",
   path: "/global/india",
 });
 
@@ -19,9 +19,9 @@ export default function IndiaOffices() {
       <LocalBusinessJsonLd offices={offices} />
       <PageHero
         crumbs={[{ name: "Global Presence", href: "/global" }, { name: "India", href: "/global/india" }]}
-        eyebrow="Pan-India"
+        eyebrow="India"
         title="Our offices across India"
-        intro="Twelve cities, anchored in Mumbai. Addresses, phones and partners-in-charge are placeholders the firm will supply."
+        intro="Mumbai, Ahmedabad and Surat. Addresses, phones and partners-in-charge are placeholders the firm will supply."
       />
       <Section tone="paper">
         <IndiaMap />

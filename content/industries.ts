@@ -530,3 +530,105 @@ export const industries: Industry[] = [
 ];
 
 export const industryBySlug = (slug: string) => industries.find((i) => i.slug === slug);
+
+/**
+ * Industries grouped into sectors for the homepage (client direction, Book1
+ * Home #10 — categorised presentation). `slug` deep-links to an industry page
+ * where one exists; entries without a slug are shown as labels only.
+ */
+export type IndustryCategory = {
+  group: string;
+  items: { label: string; slug?: string }[];
+};
+
+export const industryCategories: IndustryCategory[] = [
+  {
+    group: "Financial Services",
+    items: [
+      { label: "BFSI", slug: "bfsi" },
+      { label: "Fintech", slug: "fintech" },
+      { label: "Insurance", slug: "insurance" },
+      { label: "NBFCs" },
+      { label: "PMS, AIFs & RIAs", slug: "funds-aif" },
+      { label: "Family Offices", slug: "family-offices" },
+    ],
+  },
+  {
+    group: "Technology & Innovation",
+    items: [
+      { label: "Technology", slug: "technology" },
+      { label: "SaaS" },
+      { label: "AI & Deep Tech" },
+      { label: "Startups", slug: "startups" },
+      { label: "Telecom", slug: "telecom" },
+    ],
+  },
+  {
+    group: "Healthcare & Life Sciences",
+    items: [
+      { label: "Pharma & Life Sciences", slug: "pharma" },
+      { label: "Healthcare", slug: "healthcare" },
+      { label: "Medical Devices" },
+    ],
+  },
+  {
+    group: "Consumer & Retail",
+    items: [
+      { label: "Retail & E-commerce", slug: "retail" },
+      { label: "Consumer Brands & FMCG", slug: "consumer-brands" },
+      { label: "Food Processing" },
+    ],
+  },
+  {
+    group: "Industrial & Infrastructure",
+    items: [
+      { label: "Manufacturing", slug: "manufacturing" },
+      { label: "Automotive", slug: "automotive" },
+      { label: "Chemicals" },
+      { label: "Infrastructure", slug: "infrastructure" },
+      { label: "Energy & Renewables", slug: "energy" },
+      { label: "Aerospace & Defence", slug: "aerospace" },
+    ],
+  },
+  {
+    group: "Real Assets & Construction",
+    items: [
+      { label: "Real Estate", slug: "real-estate" },
+      { label: "Construction & Engineering" },
+    ],
+  },
+  {
+    group: "Global Trade & Logistics",
+    items: [
+      { label: "Exporters", slug: "exporters" },
+      { label: "Logistics & Supply Chain", slug: "logistics" },
+      { label: "Shipping & Maritime" },
+    ],
+  },
+  {
+    group: "Social Impact & Education",
+    items: [
+      { label: "NGOs & Social Sector", slug: "ngos" },
+      { label: "Section 8 Companies" },
+      { label: "Education", slug: "education" },
+      { label: "CSR Ecosystem" },
+    ],
+  },
+  {
+    group: "Media & Professional Services",
+    items: [
+      { label: "Media & Entertainment", slug: "media" },
+      { label: "Professional Services" },
+      { label: "Global Capability Centres (GCCs)", slug: "gcc" },
+    ],
+  },
+  {
+    group: "International Business",
+    items: [
+      { label: "MNCs" },
+      { label: "Foreign Subsidiaries" },
+      { label: "NRI Services", slug: "nri" },
+      { label: "GIFT IFSC Entities" },
+    ],
+  },
+];

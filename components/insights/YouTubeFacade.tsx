@@ -30,7 +30,7 @@ export function YouTubeFacade({ id, title }: { id?: string; title: string }) {
     >
       <Placeholder ratio="16/9" label="Video" rounded={false} />
       <span className="absolute inset-0 grid place-items-center">
-        <span className="grid h-16 w-16 place-items-center rounded-full bg-brass-500 text-navy-900 transition-transform group-hover:scale-110">
+        <span className="grid h-16 w-16 place-items-center rounded-full bg-brass-500 text-paper transition-transform group-hover:scale-110">
           <Play className="h-7 w-7 translate-x-0.5" aria-hidden />
         </span>
       </span>

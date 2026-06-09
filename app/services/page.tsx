@@ -22,7 +22,7 @@ export default function ServicesLanding() {
         crumbs={[{ name: "Services", href: "/services" }]}
         eyebrow="Our Expertise"
         title="Full-spectrum advisory, under one roof"
-        intro="Our triple-qualified CA · CS · CMA team covers eighteen practice areas. Browse by cluster, or tell us your need and we'll point you to the right team."
+        intro="Our integrated CA, CS & CMA team covers eighteen practice areas. Browse by cluster, or tell us your need and we'll point you to the right team."
       >
         <ButtonLink href="/contact?intent=quiz" variant="ghost">
           Not sure which service? Find My Service →

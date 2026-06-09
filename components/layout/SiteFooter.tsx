@@ -18,8 +18,16 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           {/* Col 1 — firm */}
           <div className="lg:col-span-3">
-            <p className="font-display text-xl text-paper">{site.name}</p>
-            <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brass-400">CA · CS · CMA</p>
+            <div className="flex items-center gap-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-ada.jpg"
+                alt={`${site.name} logo`}
+                className="h-11 w-11 shrink-0 rounded-md bg-white object-contain p-0.5"
+              />
+              <p className="font-display text-xl text-paper">{site.name}</p>
+            </div>
+            <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-brass-400">Chartered Accountants</p>
             <p className="mt-4 max-w-xs text-sm">{site.tagline}</p>
             <div className="mt-5 flex gap-3">
               {socials.map((s) => (
@@ -29,7 +37,7 @@ export function SiteFooter() {
               ))}
             </div>
             <p className="mt-5 text-xs text-[#8FA0B8]">
-              ICAI peer-reviewed firm. Membership &amp; registration details to be confirmed by the firm.
+              Membership &amp; registration details to be confirmed by the firm.
             </p>
           </div>
 

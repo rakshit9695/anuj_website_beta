@@ -5,18 +5,20 @@ export const milestones = [
   { year: "2006", event: "[Placeholder] Tax and regulatory practices established." },
   { year: "2011", event: "[Placeholder] Cross-border and FEMA advisory practice launched." },
   { year: "2015", event: "[Placeholder] Dedicated AIF & funds practice set up." },
-  { year: "2019", event: "[Placeholder] Pan-India presence extended to twelve cities." },
+  { year: "2019", event: "[Placeholder] Presence extended to Ahmedabad and Surat." },
   { year: "2022", event: "[Placeholder] GIFT City IFSC practice established." },
   { year: "2025", event: "[Placeholder] ESG, Pillar Two and DPDP advisory capabilities added." },
 ];
 
 export const values = [
-  { title: "Integrity", icon: "ShieldCheck", text: "We hold professional independence and ethics above commercial expedience." },
-  { title: "Rigour", icon: "Target", text: "Technical precision and defensible work, every time." },
-  { title: "Partnership", icon: "Handshake", text: "We act as an extension of your team, accountable for outcomes." },
-  { title: "Clarity", icon: "FileText", text: "Plain-English advice on complex matters." },
-  { title: "Depth", icon: "Layers", text: "Multidisciplinary expertise that connects the dots others miss." },
-  { title: "Responsiveness", icon: "Bell", text: "We respond within one business day and stay close through delivery." },
+  { title: "Integrity", icon: "ShieldCheck", text: "We place ethics, independence and transparency above all else. Every opinion, recommendation and action is guided by our commitment to doing what is right." },
+  { title: "Excellence", icon: "Award", text: "We pursue the highest standards of technical competence and professional quality. Precision, rigour and continuous learning define the way we serve our clients." },
+  { title: "Client First", icon: "HeartHandshake", text: "Our clients' success is our success. We invest time in understanding their objectives, challenges and aspirations to deliver practical, meaningful solutions." },
+  { title: "Accountability", icon: "Handshake", text: "We take ownership of our commitments and deliver with reliability, responsiveness and professionalism." },
+  { title: "Innovation", icon: "Zap", text: "We embrace technology, modern thinking and forward-looking solutions to help clients adapt and thrive in a rapidly evolving business environment." },
+  { title: "Collaboration", icon: "Network", text: "The best outcomes are achieved through teamwork, open communication and strong partnerships — with clients and within our firm." },
+  { title: "Value Creation", icon: "TrendingUp", text: "We look beyond compliance and focus on creating measurable value — strengthening businesses, protecting interests and enabling growth." },
+  { title: "Trust", icon: "Gem", text: "Trust is the foundation of every lasting relationship. We earn and preserve it through consistency, competence and integrity in every engagement." },
 ];
 
 export const approach = [

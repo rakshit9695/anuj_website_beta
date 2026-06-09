@@ -16,6 +16,7 @@ export function buildMetadata({
   noindex?: boolean;
 }): Metadata {
   const url = `${site.url}${path}`;
+  const ogImage = `${site.url}/logo-ada.jpg`;
   return {
     title,
     description,
@@ -26,8 +27,9 @@ export function buildMetadata({
       url,
       type,
       siteName: site.name,
+      images: [{ url: ogImage, alt: site.name }],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
     ...(noindex ? { robots: { index: false, follow: false } } : {}),
   };
 }

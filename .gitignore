@@ -31,6 +31,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# client source documents — confidential; never commit or serve
+/client-docs/
+/*.xlsx
+/*.docx
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -15,7 +15,6 @@ export const practices: Practice[] = [
     tagline: "Statutory, internal, forensic and ESG assurance — listed-company grade.",
     overview:
       "From listed-company statutory audits to forensic investigations and BRSR assurance, our audit practice combines technical rigour with sector depth. We audit under Ind AS, IFRS and US GAAP and serve banks, NBFCs, AIFs, insurers and multinationals.",
-    credentialBadge: "Peer-Reviewed Firm",
     groups: [
       {
         title: "Statutory & Regulatory Audits",

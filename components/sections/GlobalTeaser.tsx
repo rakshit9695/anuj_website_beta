@@ -17,9 +17,9 @@ export function GlobalTeaser() {
       <div className="grid items-center gap-10 lg:grid-cols-2">
         <div>
           <SectionHeading
-            eyebrow="Pan-India & Global"
-            title="One firm. Every country."
-            intro="A twelve-city Indian footprint anchored in Mumbai, with cross-border coverage across the jurisdictions that matter to Indian capital."
+            eyebrow="India & Global"
+            title="India-rooted, globally connected."
+            intro="Headquartered in Mumbai with offices in Ahmedabad and Surat, and cross-border advisory capability across the jurisdictions that matter to Indian businesses, founders and NRIs."
             onDark
           />
           <div className="mt-6 flex flex-wrap gap-2">
@@ -34,7 +34,7 @@ export function GlobalTeaser() {
           </div>
         </div>
         <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-          <p className="text-sm font-medium uppercase tracking-widest text-brass-400">12 Indian offices</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-brass-400">Our offices</p>
           <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm text-[#C2CEDD] sm:grid-cols-3">
             {offices.map((o) => (
               <span key={o.city}>{o.city}{o.isHQ ? " ★" : ""}</span>

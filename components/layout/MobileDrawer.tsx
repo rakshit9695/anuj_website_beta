@@ -127,7 +127,6 @@ export function MobileDrawer({
             </Accordion.Root>
 
             <div className="space-y-2 py-4">
-              <Link href="/media" onClick={close} className="block font-medium text-navy-900">Media</Link>
               <Link href="/contact" onClick={close} className="block font-medium text-navy-900">Contact</Link>
             </div>
 

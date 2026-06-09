@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Carousel } from "@/components/ui/Carousel";
 import { ButtonLink } from "@/components/ui/Button";
 import { Placeholder } from "@/components/ui/Placeholder";
-import { stats } from "@/content/stats";
 
 type Slide = {
   eyebrow: string;
@@ -17,9 +16,9 @@ type Slide = {
 const slides: Slide[] = [
   {
     eyebrow: "One firm. Every discipline.",
-    title: "India's rare CA · CS · CMA multidisciplinary firm",
+    title: "India's leading Chartered Accountancy & consulting firm",
     support:
-      "Audit, tax, AIF/fund, FEMA, M&A and global-entity advisory that normally takes three firms — delivered under one roof.",
+      "Audit, tax, regulatory, transaction and cross-border advisory — coordinated by one accountable team, so decisions that carry financial and regulatory weight are handled under one roof.",
     primary: { label: "Book a Consultation", href: "/contact?intent=consultation" },
     secondary: { label: "Explore Services", href: "/services" },
   },
@@ -40,10 +39,10 @@ const slides: Slide[] = [
     secondary: { label: "Startup Advisory", href: "/services/startup-vc-pe" },
   },
   {
-    eyebrow: "Global Compliance",
-    title: "One Firm. Every Country.",
+    eyebrow: "Cross-Border Advisory",
+    title: "India-rooted, globally connected",
     support:
-      "Pan-India presence and cross-border coverage across the US, UK, UAE, Singapore, Mauritius and Cayman.",
+      "Cross-border tax, FEMA and global-entity advisory for clients expanding into — and investing from — the US, UK, UAE, Singapore and the GIFT City IFSC.",
     primary: { label: "Talk to the Cross-Border Team", href: "/contact" },
     secondary: { label: "Global Presence", href: "/global" },
   },
@@ -58,7 +57,6 @@ const slides: Slide[] = [
 ];
 
 export function Hero() {
-  const years = stats[0]?.value ?? 25;
   return (
     <section className="relative bg-navy-900 text-paper">
       <Carousel
@@ -92,13 +90,13 @@ export function Hero() {
       {/* Floating badges — anchored to the lower-right, clear of the sticky header */}
       <div className="pointer-events-none absolute bottom-12 right-[clamp(1rem,5vw,4rem)] z-10 hidden flex-col items-end gap-2 lg:flex">
         <span className="pointer-events-auto rounded-full border border-brass-400/40 bg-navy-950/60 px-4 py-1.5 text-sm font-medium text-brass-400 backdrop-blur">
-          {years}+ years of practice
+          Long-standing industry experience
         </span>
         <Link
           href="/about"
           className="pointer-events-auto rounded-full border border-white/20 bg-navy-950/60 px-4 py-1.5 text-sm font-medium text-paper backdrop-blur hover:border-brass-400"
         >
-          CA · CS · CMA under one roof
+          CA · CS · CMA professionals under one roof
         </Link>
       </div>
     </section>

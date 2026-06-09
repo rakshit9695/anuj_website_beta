@@ -8,12 +8,11 @@ import { CTABand } from "@/components/ui/CTABand";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { ButtonLink } from "@/components/ui/Button";
 import { aboutNav } from "@/content/nav";
-import { stats } from "@/content/stats";
 
 export const metadata: Metadata = buildMetadata({
   title: "About ADA",
   description:
-    "Anuj Desai & Associates is India's rare triple-qualified CA · CS · CMA multidisciplinary firm — audit, tax, regulatory and cross-border advisory under one roof.",
+    "Anuj Desai & Associates is a client-centric Chartered Accountancy & consulting firm — audit, tax, regulatory, transaction and cross-border advisory under one roof.",
   path: "/about",
 });
 
@@ -23,29 +22,47 @@ export default function AboutHub() {
       <PageHero
         crumbs={[{ name: "About", href: "/about" }]}
         eyebrow="About ADA"
-        title="A multidisciplinary firm, built around the client"
-        intro="We bring chartered accountancy, company secretarial and cost & management expertise together — so audit, tax, regulatory and cross-border work is handled by one accountable team."
+        title="A Chartered Accountancy & consulting firm, built around the client"
+        intro="A client-centric chartered accountancy and consulting firm, bringing together financial, regulatory and business expertise to deliver seamless, end-to-end solutions."
       />
 
       <Section tone="paper">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
+        <div className="grid items-start gap-10 lg:grid-cols-2">
           <div>
             <p className="eyebrow">Our firm</p>
             <h2 className="mt-3 font-display text-h2 text-navy-900">
-              {stats[0]?.value}+ years of multidisciplinary excellence
+              Integrated expertise, under one roof
             </h2>
             <p className="mt-4 text-ink-700">
-              [Placeholder] From a Mumbai base, ADA has grown into a pan-India firm with global reach, serving founders, promoter families, funds and multinationals. The firm&rsquo;s defining idea is breadth with depth — the rare combination of CA, CS and CMA expertise under one roof.
+              ADA is a chartered accountancy and consulting firm built around a
+              simple principle: clients are best served when financial,
+              regulatory and strategic advice work together seamlessly. By
+              bringing Chartered Accountancy, Company Secretarial and Cost &amp;
+              Management expertise under one roof, we deliver integrated
+              solutions across audit, taxation, corporate law, regulatory
+              compliance, transaction advisory and cross-border matters.
             </p>
             <p className="mt-3 text-ink-700">
-              Replace this section with the firm&rsquo;s approved narrative, history and leadership message.
+              From its headquarters in Mumbai and through its presence across
+              key business centres in India and overseas, ADA serves
+              entrepreneurs, promoter-led businesses, family offices, investment
+              funds, multinational enterprises and emerging growth companies.
+              Our approach combines technical depth, commercial insight and
+              partner-led execution, enabling clients to navigate complexity,
+              manage risk and pursue growth with confidence.
+            </p>
+            <p className="mt-3 text-ink-700">
+              At the heart of the firm is a commitment to long-term
+              relationships, practical advice and uncompromising professional
+              standards — providing clients with one trusted team and clear
+              accountability across every stage of their business journey.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <ButtonLink href="/about/our-story" variant="secondary">Our story</ButtonLink>
-              <ButtonLink href="/about/team" variant="ghost">Meet the team →</ButtonLink>
+              <ButtonLink href="/about/team" variant="ghost">Meet the founder →</ButtonLink>
             </div>
           </div>
-          <Placeholder ratio="4/3" label="Firm / Mumbai BKC" tone="navy" />
+          <Placeholder ratio="4/3" label="Firm / Mumbai" tone="navy" />
         </div>
       </Section>
 
@@ -60,8 +77,8 @@ export default function AboutHub() {
           ))}
         </div>
         <div className="mt-8 rounded-xl border border-brass-400/60 bg-brass-100/40 p-6">
-          <p className="font-medium text-navy-900">Firm brochure &amp; credentials deck</p>
-          <p className="mt-1 text-sm text-ink-700">A downloadable overview of the firm (placeholder PDF — the firm will supply).</p>
+          <p className="font-medium text-navy-900">Firm profile</p>
+          <p className="mt-1 text-sm text-ink-700">The firm&rsquo;s current profile deck will be linked here once supplied. [CLIENT TO PROVIDE — firm profile PDF]</p>
         </div>
       </Section>
 

@@ -96,7 +96,7 @@ function CostReduction() {
         <p className="mx-auto mt-3 max-w-2xl text-[#C2CEDD]">
           A structured diagnostic across procurement, overheads, logistics, tax and financing — most engagements identify savings well in excess of the fee. Start with a complimentary opportunity assessment.
         </p>
-        <Link href="/contact?intent=consultation&service=consulting-cfo" className="mt-6 inline-flex rounded-lg bg-brass-500 px-5 py-2.5 font-semibold text-navy-900 hover:bg-brass-400">
+        <Link href="/contact?intent=consultation&service=consulting-cfo" className="mt-6 inline-flex rounded-lg bg-brass-500 px-5 py-2.5 font-semibold text-paper hover:bg-brass-600">
           Request a Cost-Reduction Audit
         </Link>
       </div>

@@ -73,7 +73,7 @@ export function InsightsExplorer({ posts }: { posts: Liter[] }) {
       <div className="mt-3 flex flex-wrap gap-1.5">
         <button
           onClick={() => { setCat("all"); setPage(1); }}
-          className={cn("rounded-full px-2.5 py-1 text-xs transition-colors", cat === "all" ? "bg-brass-500 text-navy-900" : "border border-ink-300 text-ink-700")}
+          className={cn("rounded-full px-2.5 py-1 text-xs transition-colors", cat === "all" ? "bg-brass-500 text-paper" : "border border-ink-300 text-ink-700")}
         >
           All categories
         </button>
@@ -81,7 +81,7 @@ export function InsightsExplorer({ posts }: { posts: Liter[] }) {
           <button
             key={c.key}
             onClick={() => { setCat(c.key); setPage(1); }}
-            className={cn("rounded-full px-2.5 py-1 text-xs transition-colors", cat === c.key ? "bg-brass-500 text-navy-900" : "border border-ink-300 text-ink-700 hover:border-brass-400")}
+            className={cn("rounded-full px-2.5 py-1 text-xs transition-colors", cat === c.key ? "bg-brass-500 text-paper" : "border border-ink-300 text-ink-700 hover:border-brass-400")}
           >
             {c.label}
           </button>

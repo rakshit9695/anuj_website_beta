@@ -6,7 +6,7 @@ import { CTABand } from "@/components/ui/CTABand";
 
 export const metadata: Metadata = buildMetadata({
   title: "Our Story",
-  description: "The founding, philosophy and multidisciplinary approach of Anuj Desai & Associates.",
+  description: "The founding, philosophy and integrated approach of Anuj Desai & Associates.",
   path: "/about/our-story",
 });
 
@@ -17,26 +17,67 @@ export default function OurStory() {
         crumbs={[{ name: "About", href: "/about" }, { name: "Our Story", href: "/about/our-story" }]}
         eyebrow="About ADA"
         title="Our story"
-        intro="Why we built a firm around the idea that clients are better served when disciplines work together."
+        intro="Built on the belief that businesses deserve advice that works together."
       />
       <Section tone="paper">
         <div className="prose-ada mx-auto">
-          <p><em>[Placeholder narrative — the firm will supply approved copy.]</em></p>
-          <p>Anuj Desai & Associates was founded on a simple conviction: that the boundaries between audit, tax, company law and management advisory are artificial — and that clients pay the price when their advisors work in silos.</p>
-          <h2>What multidisciplinary means in practice</h2>
-          <p>For a fund launch, a cross-border acquisition or an IPO, the questions span SEBI, the Income-tax Act, FEMA, the Companies Act and accounting standards at once. Our triple-qualified team — chartered accountants, company secretaries and cost & management accountants — answers them together, in one room.</p>
-          <h2>Our philosophy</h2>
-          <p>Earned authority over flashiness. Technical rigour over shortcuts. Long-term partnership over transactions. These principles shape every engagement.</p>
-        </div>
-        <div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
-          <div className="rounded-xl border border-ink-300 bg-surface-alt p-6">
-            <h3 className="font-display text-lg text-navy-900">Mission</h3>
-            <p className="mt-2 text-sm text-ink-700">[Placeholder] To be the single, trusted advisor for India&rsquo;s most ambitious businesses and families — across every discipline they need.</p>
-          </div>
-          <div className="rounded-xl border border-ink-300 bg-surface-alt p-6">
-            <h3 className="font-display text-lg text-navy-900">Vision</h3>
-            <p className="mt-2 text-sm text-ink-700">[Placeholder] A Big-4 challenger firm defined by depth, integrity and the rare CA · CS · CMA combination.</p>
-          </div>
+          <p>
+            Anuj Desai &amp; Associates was founded with a clear purpose: to
+            redefine the role of professional advisors in an increasingly
+            complex business environment. We believe businesses deserve more
+            than fragmented compliance support — they deserve a trusted advisory
+            partner capable of addressing financial, regulatory, strategic and
+            operational challenges under one roof.
+          </p>
+          <p>
+            What began as a vision to build a modern professional services firm
+            has evolved into a multidisciplinary practice serving entrepreneurs,
+            startups, SMEs, family-owned businesses, corporates, investment
+            funds, non-profit organisations and international enterprises. Our
+            approach combines deep technical expertise with commercial
+            practicality, enabling clients to make informed decisions while
+            remaining fully compliant with evolving regulations.
+          </p>
+          <p>
+            Our firm operates at the intersection of finance, governance,
+            taxation and business strategy. We provide comprehensive solutions
+            across audit and assurance, direct and indirect taxation, corporate
+            law and secretarial compliance, regulatory advisory, transaction
+            support, CFO services, business consulting, FEMA and cross-border
+            matters, fund advisory, NGO and Section 8 compliance, labour law and
+            specialised regulatory domains.
+          </p>
+          <p>
+            What distinguishes us is our commitment to understanding the
+            business behind every engagement. We do not view our role as merely
+            preparing reports, filing returns or satisfying statutory
+            requirements. Instead, we work closely with clients to identify
+            opportunities, mitigate risks, strengthen governance frameworks,
+            improve financial efficiency and support long-term growth.
+          </p>
+
+          <h2>The principles that guide us</h2>
+          <ul>
+            <li><strong>Integrity</strong> — we uphold the highest standards of professional ethics, independence and transparency.</li>
+            <li><strong>Excellence</strong> — we combine technical precision with continuous learning to deliver work of the highest quality.</li>
+            <li><strong>Client-centricity</strong> — every recommendation is tailored to the client&rsquo;s unique objectives, challenges and growth aspirations.</li>
+            <li><strong>Value creation</strong> — we focus on outcomes that extend beyond compliance and contribute meaningfully to our clients&rsquo; success.</li>
+          </ul>
+
+          <p>
+            Today, Anuj Desai &amp; Associates serves clients across multiple
+            industries and jurisdictions through a growing network of
+            professionals and strategic capabilities. With presence and support
+            capabilities spanning India, the United States and Canada, we are
+            positioned to assist businesses that operate locally, nationally and
+            globally.
+          </p>
+          <p>
+            Our ambition is simple: to become the most trusted advisor for
+            ambitious businesses, entrepreneurs, investment funds, institutions
+            and families — delivering insight, confidence and lasting value at
+            every stage of their journey.
+          </p>
         </div>
       </Section>
       <CTABand />

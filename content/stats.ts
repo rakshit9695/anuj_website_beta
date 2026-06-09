@@ -1,13 +1,27 @@
-import type { Stat } from "./types";
-
 /**
- * Animated counter values are PLACEHOLDERS the client must confirm
- * (CLIENT_TODO.md). Kept deliberately round and neutral.
+ * Qualitative trust pillars for the homepage band.
+ *
+ * Per client direction we do NOT display unverified scale numbers
+ * (years / client counts / countries). These are defensible, non-numeric
+ * positioning statements. Wording to be confirmed by the firm — see CLIENT_TODO.md.
  */
-export const stats: Stat[] = [
-  { value: 25, suffix: "+", label: "Years of Experience" },
-  { value: 1500, suffix: "+", label: "Clients Served" },
-  { value: 15, suffix: "+", label: "Countries" },
-  { value: 120, suffix: "+", label: "Professionals" },
-  { value: 500, suffix: "+", label: "Engagements Delivered" },
+export type Pillar = { label: string; sub: string };
+
+export const pillars: Pillar[] = [
+  {
+    label: "Long-standing experience",
+    sub: "Decades of combined professional practice across disciplines.",
+  },
+  {
+    label: "Integrated expertise",
+    sub: "Chartered Accountancy, Company Secretarial and Cost & Management professionals under one roof.",
+  },
+  {
+    label: "Partner-led delivery",
+    sub: "Senior accountability and a single point of contact on every engagement.",
+  },
+  {
+    label: "Mumbai · Ahmedabad · Surat",
+    sub: "Serving entrepreneurs, funds and enterprises across India and overseas.",
+  },
 ];

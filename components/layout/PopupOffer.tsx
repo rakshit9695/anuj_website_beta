@@ -65,7 +65,7 @@ export function PopupOffer() {
           <Link
             href="/insights/budget/2026-27"
             onClick={() => setOpen(false)}
-            className="mt-3 inline-flex rounded-lg bg-brass-500 px-4 py-2 text-sm font-semibold text-navy-900 transition-colors hover:bg-brass-400"
+            className="mt-3 inline-flex rounded-lg bg-brass-500 px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-brass-600"
           >
             Get the PDF
           </Link>

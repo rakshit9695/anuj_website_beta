@@ -1,88 +1,108 @@
 "use client";
 
 import { useState } from "react";
+import { MapPin, ExternalLink } from "lucide-react";
 import { offices } from "@/content/offices";
+import { cn } from "@/lib/utils";
 
-// Approximate India bounding box for a simple linear projection.
-const LAT_MAX = 37,
-  LAT_MIN = 7,
-  LNG_MIN = 68,
-  LNG_MAX = 98;
-const W = 420,
-  H = 480;
+/**
+ * Office locator backed by a real, interactive Google Map.
+ *
+ * Works with no API key via the keyless Maps embed. If
+ * NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY is set, it uses the official Google
+ * Maps Embed API instead (no "for development only" overlay). Markers are
+ * placed by coordinate, so it is accurate even while street addresses are
+ * still placeholders.
+ */
+const EMBED_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY;
 
-function project(lat: number, lng: number) {
-  const x = ((lng - LNG_MIN) / (LNG_MAX - LNG_MIN)) * W;
-  const y = ((LAT_MAX - lat) / (LAT_MAX - LAT_MIN)) * H;
-  return { x, y };
+function embedSrc(lat: number, lng: number, zoom = 11) {
+  if (EMBED_KEY) {
+    return `https://www.google.com/maps/embed/v1/place?key=${EMBED_KEY}&q=${lat},${lng}&zoom=${zoom}`;
+  }
+  return `https://maps.google.com/maps?q=${lat},${lng}&z=${zoom}&hl=en&output=embed`;
 }
 
-// A simplified, stylised India silhouette (not survey-accurate; decorative).
-const INDIA_PATH =
-  "M150 40 L210 55 L250 45 L300 70 L330 60 L360 95 L345 130 L370 160 L350 200 L300 230 L290 270 L250 320 L240 380 L210 440 L185 460 L175 420 L150 360 L120 320 L95 270 L80 220 L70 170 L95 150 L80 120 L110 95 L120 60 Z";
+function directionsUrl(lat: number, lng: number) {
+  return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+}
 
-/** Stylised India map with brass city markers; click reveals office details. */
 export function IndiaMap({ interactive = true }: { interactive?: boolean }) {
-  const [active, setActive] = useState<string | null>(null);
-  const activeOffice = offices.find((o) => o.city === active);
+  const located = offices.filter((o) => o.lat != null && o.lng != null);
+  const [active, setActive] = useState(located[0]?.city ?? offices[0]?.city);
+  const office = located.find((o) => o.city === active) ?? located[0];
+
+  if (!office || office.lat == null || office.lng == null) {
+    return (
+      <div className="rounded-xl border border-ink-300 bg-surface p-6 text-sm text-ink-500">
+        Office locations will appear here once coordinates are supplied.
+      </div>
+    );
+  }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-      <div className="relative mx-auto w-full max-w-md">
-        <svg viewBox={`0 0 ${W} ${H}`} className="h-auto w-full" role="img" aria-label="ADA offices across India">
-          <path d={INDIA_PATH} fill="var(--navy-900)" opacity="0.9" />
-          <path d={INDIA_PATH} fill="none" stroke="var(--brass-500)" strokeWidth="1.5" opacity="0.5" />
-          {offices.map((o) => {
-            if (o.lat == null || o.lng == null) return null;
-            const { x, y } = project(o.lat, o.lng);
-            const isActive = active === o.city;
-            return (
-              <g key={o.city} transform={`translate(${x},${y})`}>
-                <circle
-                  r={o.isHQ ? 7 : 5}
-                  className="cursor-pointer"
-                  fill={isActive ? "var(--brass-400)" : "var(--brass-500)"}
-                  stroke="var(--paper)"
-                  strokeWidth="1.5"
-                  onClick={() => interactive && setActive(isActive ? null : o.city)}
-                  onMouseEnter={() => interactive && setActive(o.city)}
-                />
-                {o.isHQ && <circle r="11" fill="none" stroke="var(--brass-500)" strokeWidth="1" opacity="0.6" />}
-              </g>
-            );
-          })}
-        </svg>
+    <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr]">
+      {/* Map */}
+      <div className="overflow-hidden rounded-xl border border-ink-300 bg-navy-50 shadow-card">
+        <iframe
+          key={office.city}
+          title={`Map — ${office.city} office`}
+          src={embedSrc(office.lat, office.lng)}
+          className="h-[300px] w-full sm:h-[420px]"
+          style={{ border: 0 }}
+          loading="lazy"
+          allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </div>
+
+      {/* City switcher + details */}
       <div>
-        {interactive ? (
-          activeOffice ? (
-            <div className="rounded-xl border border-ink-300 bg-surface p-5">
-              <p className="font-display text-lg text-navy-900">
-                {activeOffice.city}
-                {activeOffice.isHQ && <span className="ml-2 text-xs font-semibold uppercase text-brass-600">HQ</span>}
-              </p>
-              <p className="mt-2 text-sm text-ink-700">{activeOffice.address}</p>
-              {activeOffice.partnerInCharge && (
-                <p className="mt-1 text-sm text-ink-500">Partner-in-charge: {activeOffice.partnerInCharge}</p>
+        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Offices">
+          {located.map((o) => (
+            <button
+              key={o.city}
+              role="tab"
+              aria-selected={o.city === active}
+              onClick={() => interactive && setActive(o.city)}
+              className={cn(
+                "rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors",
+                o.city === active
+                  ? "bg-navy-900 text-paper"
+                  : "border border-ink-300 bg-surface text-ink-700 hover:border-brass-400",
               )}
-            </div>
-          ) : (
-            <p className="text-sm text-ink-500">Hover or tap a city marker to see office details.</p>
-          )
-        ) : null}
-        <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-ink-700">
-          {offices.map((o) => (
-            <li key={o.city}>
-              <button
-                onClick={() => interactive && setActive(o.city)}
-                className="hover:text-navy-900"
-              >
-                {o.city}
-                {o.isHQ ? " (HQ)" : ""}
-              </button>
-            </li>
+            >
+              {o.city}
+              {o.isHQ ? " (HQ)" : ""}
+            </button>
           ))}
-        </ul>
+        </div>
+
+        <div className="mt-4 rounded-xl border border-ink-300 bg-surface p-5">
+          <p className="flex items-center gap-2 font-display text-lg text-navy-900">
+            <MapPin className="h-4 w-4 text-brass-500" aria-hidden />
+            {office.city}
+            {office.isHQ && (
+              <span className="ml-1 rounded-full bg-brass-100 px-2 py-0.5 text-xs font-semibold uppercase text-brass-600">
+                HQ
+              </span>
+            )}
+          </p>
+          <p className="mt-2 text-sm text-ink-700">{office.address}</p>
+          {office.partnerInCharge && (
+            <p className="mt-1 text-sm text-ink-500">Partner-in-charge: {office.partnerInCharge}</p>
+          )}
+          {office.phone && <p className="mt-1 text-sm text-ink-500">{office.phone}</p>}
+          {office.email && <p className="text-sm text-ink-500">{office.email}</p>}
+          <a
+            href={directionsUrl(office.lat, office.lng)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-navy-700 hover:underline"
+          >
+            Open in Google Maps <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+          </a>
+        </div>
       </div>
     </div>
   );
