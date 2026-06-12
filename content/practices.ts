@@ -1,4 +1,5 @@
 import type { Practice } from "./types";
+import { gapGroupsBySlug, gapPractices } from "./serviceGaps";
 
 /**
  * The firm's 18 practice areas — the real taxonomy. Service names use correct
@@ -963,6 +964,14 @@ export const practices: Practice[] = [
     ],
   },
 ];
+
+// Merge the "Service Gap Analysis" (2026-06-10) into the catalogue: append the
+// extra service groups to the matching practice, then add the new practice lines.
+for (const p of practices) {
+  const extraGroups = gapGroupsBySlug[p.slug];
+  if (extraGroups) p.groups.push(...extraGroups);
+}
+practices.push(...gapPractices);
 
 export const practiceBySlug = (slug: string) => practices.find((p) => p.slug === slug);
 

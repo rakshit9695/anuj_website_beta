@@ -18,13 +18,14 @@ export const offices: Office[] = [
     lng: 72.9081,
   },
   {
+    // Full address withheld at the client's request; area only for now.
     city: "Ahmedabad",
-    address: "[CLIENT TO PROVIDE — Ahmedabad address]",
+    address: "Navrangpura, Ahmedabad",
     phone: "+91 96194 56656",
     email: "office@anujdesaiassociates.com",
     partnerInCharge: "CA Anuj Desai",
-    lat: 23.0225,
-    lng: 72.5714,
+    lat: 23.0364,
+    lng: 72.5609,
   },
   {
     city: "Surat",

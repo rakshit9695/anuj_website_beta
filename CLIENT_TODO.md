@@ -10,6 +10,21 @@ Every item below is a clearly-marked placeholder in the build. The firm replaces
 
 ---
 
+## ✅ Client update round (12 June 2026) — applied
+
+From the client's WhatsApp screenshots, the firm-profile PDF and the Service Gap Analysis:
+- **Firm profile** → `Anuj-Desai-and-Associates-Final.pdf` published at `/anuj-desai-associates-firm-profile.pdf`; download button on `/about` and a footer link. (Source PDF + screenshots + gap-analysis doc moved out of `/public` into gitignored `client-docs/`.)
+- **Forms library** → forms no longer dump to a portal/ICAI root. Each form now links to the live source the firm gave (Income Tax → incometaxindia.gov.in/income-tax-forms; GST → TaxByKK; SEBI → SEBI formats PDF; RBI/FEMA → RBI forms; Labour Law → Advocatekhoj; IBC → Resurgent). Added an **"Official sources"** panel at the top of `/knowledge-bank/forms` (incl. NBFC, PRAVAAH list, GST portal PDF, CACJSNanda, IBBI rules). All ICAI links removed from the Forms page (ICAI links remain only on Rules → Accounting/Audit standards, which are genuinely ICAI documents).
+- **Insights/article cards** → cover-image thumbnail removed from `InsightCard` (client: "yeha se phot hataa"). Re-enable in `components/ui/Cards.tsx` when real images arrive.
+- **Budget popup** → the Budget 2026 `PopupOffer` slide-in removed from the layout.
+- **Ahmedabad office** → full address withheld per client; shows **"Navrangpura, Ahmedabad"** only.
+- **Services** → folded in the full `2026-06-10_ADA_Service_Gap_Analysis` via `content/serviceGaps.ts`: Part A added as extra service groups across the 18 practices; Part B added **6 new practice lines** — Ind AS & Accounting Advisory, Cost Accounting & CMA, Actuarial & Employee Benefits, Treasury & Forex, NBFC & FinTech Regulatory, Data Privacy & Cybersecurity (DPDP).
+- **Careers/publishing backend** → **not built** (per instruction); scoped in `BACKEND_PLAN.md`.
+
+Still pending from the client (this round): Ahmedabad full address when ready; the actual backend/CMS go-ahead (Option A vs B in `BACKEND_PLAN.md`); photographs (still empty placeholders).
+
+---
+
 ## ✅ Client documents round (9 June 2026) — what was applied from `/public`
 
 Mapped from `2026-06-09_ADA_Website_Information_Request.docx`, `2026-06-06_Services.docx`, the compliance workbooks and `White Background Logo`:

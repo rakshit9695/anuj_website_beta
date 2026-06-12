@@ -117,6 +117,7 @@ export const footerColumns = {
     { label: "Calculators", href: "/knowledge-bank/calculators" },
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
+    { label: "Firm Profile (PDF)", href: "/anuj-desai-associates-firm-profile.pdf" },
   ] as NavLink[],
 };
 

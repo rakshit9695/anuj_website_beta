@@ -6,7 +6,6 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { CookieBanner } from "@/components/layout/CookieBanner";
-import { PopupOffer } from "@/components/layout/PopupOffer";
 import { StickyCTA } from "@/components/layout/StickyCTA";
 import { Analytics } from "@/components/layout/Analytics";
 import { OrganizationJsonLd } from "@/components/ui/JsonLd";
@@ -71,7 +70,6 @@ export default function RootLayout({
         <WhatsAppFloat />
         <StickyCTA />
         <CookieBanner />
-        <PopupOffer />
         <Analytics />
       </body>
     </html>

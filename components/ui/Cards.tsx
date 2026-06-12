@@ -78,9 +78,6 @@ export function InsightCard({
 }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-ink-300 bg-surface transition-all hover:-translate-y-1 hover:shadow-card-hover">
-      <Link href={href} className="block">
-        <Placeholder ratio="16/9" label={category ? undefined : "Insight"} rounded={false} />
-      </Link>
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-center gap-2">
           {category && <CategoryTag categoryKey={category} />}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -76,9 +76,20 @@ export default function AboutHub() {
             </Link>
           ))}
         </div>
-        <div className="mt-8 rounded-xl border border-brass-400/60 bg-brass-100/40 p-6">
-          <p className="font-medium text-navy-900">Firm profile</p>
-          <p className="mt-1 text-sm text-ink-700">The firm&rsquo;s current profile deck will be linked here once supplied. [CLIENT TO PROVIDE — firm profile PDF]</p>
+        <div className="mt-8 flex flex-col gap-4 rounded-xl border border-brass-400/60 bg-brass-100/40 p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="font-medium text-navy-900">Firm profile</p>
+            <p className="mt-1 text-sm text-ink-700">Download the full Anuj Desai &amp; Associates profile — services, sectors and approach.</p>
+          </div>
+          <a
+            href="/anuj-desai-associates-firm-profile.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-brass-500 px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-brass-600"
+          >
+            <Download className="h-4 w-4" aria-hidden />
+            Firm profile (PDF)
+          </a>
         </div>
       </Section>
 
